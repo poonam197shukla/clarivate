@@ -1,0 +1,30 @@
+    <div #dashboard class="container container-padding">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- . Button to go to list page -->
+                <button type="button" class="btn btn-primary" (click)="goToList()">Go to List</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <!--Table with Fav items added-->
+            <table class="table table-striped border">
+                <thead>
+                <tr>
+                  <th scope="col" sortable="name">Album ID</th>
+                  <th scope="col" sortable="population">Title</th>
+                  <th scope="col" sortable="population">Image</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let list of favItems ">
+                    <td> {{list.id}}</td>
+                    <td> {{list.title}}</td>
+                    <td> <img [src]="list.url" alt="No image found" width="50"></td>                 
+                </tr>
+                </tbody>
+              </table>   
+        </div>
+       
+    </div>
+    
+  

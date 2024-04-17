@@ -1,0 +1,36 @@
+<div #scrollableContent class="container container-padding">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- . Button to go to dashboard page -->
+            <button type="button" class="btn btn-primary" (click)="backToDashboard()">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div #tablecontainer class="table-container"(scroll)="onTableScroll()">
+           <!--Table with All items added-->
+          <table class="table table-striped border">
+              <thead>
+                <tr>
+                  <th scope="col">Favs</th>
+                  <th scope="col" sortable="name">Album ID</th>
+                  <th scope="col" sortable="population">Title</th>
+                  <th scope="col" sortable="population">Image</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let list of listOfItem ">
+                  <td> <input class="form-check-input" type="checkbox"  value="list.checked" [checked]="list.checked" id="" (change)="addToFavs(list)"></td>
+                  <td> {{list.id}}</td>
+                  <td> {{list.title}}</td>
+                  <td> <img [src]="list.url" alt="No image found" width="50"></td>             
+              </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+      
+</div>
+

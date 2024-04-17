@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+.container-padding {
+    padding-top: 4rem;
+}
+
+.row{
+    padding-bottom: 1rem;
+}
+
+.table-container{
+    height: 40rem; 
+    overflow: auto;
+}
